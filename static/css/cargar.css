@@ -1,0 +1,124 @@
+/* Estilo general */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* para la imágen
+/* Contenedor del logo */
+.logo-container {
+    text-align: center; /* Centra el logo en la página */
+    margin: 20px 0;
+}
+
+/* Estilo de la imagen del logo */
+.logo {
+    max-width: 200px; /* Tamaño máximo del logo */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    border-radius: 8px; /* Bordes redondeados si lo deseas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Encabezados */
+h1 {
+    text-align: center;
+    color: #a71e52;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+h2 {
+    text-align: center;
+    color: #555;
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+
+/* Formulario */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+form p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #555;
+}
+
+input[type="text"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #a71e52;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #8f1845;
+    transform: scale(1.05);
+}
+
+/* Navegación */
+a.button {
+    display: block;
+    max-width: 200px;
+    margin: 10px auto;
+    padding: 10px 15px;
+    background-color: #25d366;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a.button:hover {
+    background-color: #1db954;
+    transform: scale(1.05);
+}
+
+a.button:active {
+    background-color: #148f3d;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    input[type="submit"],
+    a.button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}

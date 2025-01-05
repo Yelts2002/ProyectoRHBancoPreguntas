@@ -1,0 +1,101 @@
+    /* Estilo general */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Títulos secundarios */
+h2 {
+    color: #25d366;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 20px;
+}
+
+ul li {
+    background: #fff;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul li:hover {
+    background-color: #f9f9f9;
+}
+
+/* Navegación adicional */
+.navigation {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navigation .button-link {
+    text-decoration: none;
+    padding: 12px 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navigation .button-link:hover {
+    background-color: #1da853;
+    transform: scale(1.05);
+}
+
+.navigation .button-link:active {
+    background-color: #189047;
+    transform: scale(1);
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    .navigation .button-link {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}

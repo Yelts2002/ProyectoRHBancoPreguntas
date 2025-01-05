@@ -1,0 +1,98 @@
+/* Estilo general */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #25d366;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 80%;
+}
+
+ul li {
+    background: #fff;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+ul li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Navegación adicional */
+.navigation {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navigation .button-link {
+    text-decoration: none;
+    padding: 12px 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navigation .button-link:hover {
+    background-color: #1da853;
+    transform: scale(1.05);
+}
+
+.navigation .button-link:active {
+    background-color: #189047;
+    transform: scale(1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    .navigation .button-link {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Listar Preguntas</title>
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static '\css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '\css\listarpreg.css' %}">
 </head>
 <body>
     <h1>Preguntas Existentes</h1>
@@ -13,6 +13,13 @@
             <li>{{ pregunta.contenido.name }} - {{ pregunta.tema.nombre }} - {{ pregunta.universidad.nombre }}</li>
         {% endfor %}
     </ul>
-    <a href="{% url 'gestionar_universidades_cursos_temas' %}">Volver a Gestionar</a>
+            <!-- Navegación adicional -->
+            <nav class="navigation">
+                <ul>
+                    <li><a href="{% url 'gestionar_universidades_cursos_temas' %}" class="button-link">Gestionar Universidades, Cursos y Temas</a></li>
+                    <li><a href="{% url 'cargar_documento' %}" class="button-link">Subir más preguntas</a></li>
+                    <li><a href="{% url 'ver_datos_tablas' %}" class="button-link">Ver Datos de Tablas</a></li>
+                </ul>
+            </nav>
 </body>
 </html>

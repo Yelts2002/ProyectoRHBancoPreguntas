@@ -1,0 +1,259 @@
+/* Estilo general */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #a71e52;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* para la imágen
+/* Contenedor del logo */
+.logo-container {
+    text-align: center; /* Centra el logo en la página */
+    margin: 20px 0;
+}
+
+/* Estilo de la imagen del logo */
+.logo {
+    max-width: 200px; /* Tamaño máximo del logo */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    border-radius: 8px; /* Bordes redondeados si lo deseas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+
+/* Contenedor del formulario */
+form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 15px;
+    border: 2px solid #de8500;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Títulos */
+h1, h2 {
+    color: #25d366;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 1.6rem;
+    margin-top: 30px;
+}
+
+/* Texto dentro del formulario */
+form p, form label {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 14px;
+    margin: 20px 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus,
+select:focus {
+    border-color: #de8500;
+    outline: none;
+    box-shadow: 0 0 10px rgba(222, 133, 0, 0.5);
+    background-color: #fffbe6;
+}
+
+/* Estilos para el legend dentro de formularios */
+legend {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #25d366;
+    background-color: #fffbe6;
+    padding: 10px 15px;
+    border: 2px solid #de8500;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    text-align: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+legend:hover {
+    background-color: #fff0b3;
+    border-color: #c47200;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+legend:focus {
+    outline: none;
+    border-color: #de8500;
+    box-shadow: 0 0 8px rgba(222, 133, 0, 0.6);
+}
+
+/* Botón de envío */
+input[type="submit"] {
+    background-color: #de8500;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"]:hover {
+    background-color: #c47200;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+input[type="submit"]:active {
+    background-color: #a76000;
+    transform: scale(1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de la tabla centrado */
+.table-container {
+    display: flex;
+    justify-content: center; /* Centra la tabla horizontalmente */
+    align-items: center; /* Centra la tabla verticalmente */
+    margin: 20px 0;
+}
+
+/* Tablas */
+table {
+    width: 90%;
+    max-width: 1000px; /* Establece un tamaño máximo para la tabla */
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 14px 20px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #25d366;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+    cursor: default;
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 768px) {
+    table {
+        width: 100%; /* Hacer la tabla más pequeña en pantallas pequeñas */
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/* Navegación adicional */
+.navigation {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    gap: 20px;
+}
+
+.navigation li {
+    display: inline;
+}
+
+.navigation .button-link {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #de8500;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navigation .button-link:hover {
+    background-color: #c47200;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navigation .button-link:active {
+    background-color: #a76000;
+    transform: scale(1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .navigation ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navigation .button-link {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}

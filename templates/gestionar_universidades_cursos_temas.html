@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Universidades, Cursos y Temas</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/gestionar.css' %}">
+    <link rel="icon" href="https://academiaroberthooke.com/wp-content/uploads/2023/07/logo-robert-hooke.png" type="image/png">
+    <div class="logo-container">
+        <img src="https://academiaroberthooke.com/wp-content/uploads/2023/07/logo-robert-hooke.png" alt="Logo Robert Hooke" class="logo">
+    </div>
+</head>
+<body>
+    <header>
+        <h1>Gestión de Universidades, Cursos y Temas</h1>
+    </header>
+
+    <main>
+        <!-- Crear Universidad -->
+        <section>
+            <fieldset>
+                <legend>Crear Universidad</legend>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form_universidad.as_p }}
+                    <input type="submit" name="crear_universidad" value="Crear Universidad">
+                </form>
+            </fieldset>
+        </section>
+
+        <!-- Crear Curso -->
+        <section>
+            <fieldset>
+                <legend>Crear Curso</legend>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form_curso.as_p }}
+                    <input type="submit" name="crear_curso" value="Crear Curso">
+                </form>
+            </fieldset>
+        </section>
+
+        <!-- Crear Tema -->
+        <section>
+            <fieldset>
+                <legend>Crear Tema</legend>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form_tema.as_p }}
+                    <input type="submit" name="crear_tema" value="Crear Tema">
+                </form>
+            </fieldset>
+        </section>
+
+        <!-- Listar Universidades -->
+        <section>
+            <h2>Universidades Existentes</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre de la Universidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for universidad in universidades %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{ universidad.nombre }}</td>
+                            </tr>
+                        {% empty %}
+                            <tr>
+                                <td colspan="2">No hay universidades registradas.</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Listar Cursos -->
+        <section>
+            <h2>Cursos Existentes</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre del Curso</th>
+                            <th>Universidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for curso in cursos %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{ curso.nombre }}</td>
+                                <td>{{ curso.universidad.nombre }}</td>
+                            </tr>
+                        {% empty %}
+                            <tr>
+                                <td colspan="3">No hay cursos registrados.</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Listar Temas -->
+        <section>
+            <h2>Temas Existentes</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre del Tema</th>
+                            <th>Curso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for tema in temas %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{ tema.nombre }}</td>
+                                <td>{{ tema.curso.nombre }}</td>
+                            </tr>
+                        {% empty %}
+                            <tr>
+                                <td colspan="3">No hay temas registrados.</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- Navegación adicional -->
+        <nav class="navigation">
+            <ul>
+                <li><a href="{% url 'listar_preguntas' %}" class="button-link">Ver Preguntas</a></li>
+                <li><a href="{% url 'ver_datos_tablas' %}" class="button-link">Ver Datos de Tablas</a></li>
+            </ul>
+        </nav>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Gestión Académica</p>
+    </footer>
+</body>
+</html>

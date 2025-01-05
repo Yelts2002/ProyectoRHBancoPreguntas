@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cargar Documento</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '\css/styles.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#id_curso').change(function() {
+                var cursoId = $(this).val();
+                $.ajax({
+                    url: '/documentos/get_temas/' + cursoId + '/',
+                    type: 'GET',
+                    success: function(data) {
+                        $('#id_t ema').empty();
+                        $.each(data.temas, function(index, tema) {
+                            $('#id_tema').append('<option value="' + tema.id + '">' + tema.nombre + '</option>');
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Cargar Documento</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Cargar Pregunta">
+    </form>
+
+    <h2>Navegación</h2>
+    <a href="{% url 'gestionar_universidades_cursos_temas' %}" class="button">Gestionar Universidades, Cursos y Temas</a>
+    <a href="{% url 'listar_preguntas' %}" class="button">Listar Preguntas</a>
+    <a href="{% url 'ver_datos_tablas' %}" class="button">Ver Datos de Tablas</a>
+</body>
+</html>

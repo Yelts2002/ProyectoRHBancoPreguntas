@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ver Datos de Tablas</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '\css/styles.css' %}">
+</head>
+<body>
+    <h1>Ver Datos de Tablas</h1>
+
+    <h2>Universidades</h2>
+    <ul>
+        {% for universidad in universidades %}
+            <li>{{ universidad.nombre }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Cursos</h2>
+    <ul>
+        {% for curso in cursos %}
+            <li>{{ curso.nombre }} - {{ curso.universidad.nombre }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Temas</h2>
+    <ul>
+        {% for tema in temas %}
+            <li>{{ tema.nombre }} - {{ tema.curso.nombre }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Preguntas</h2>
+    <ul>
+        {% for pregunta in preguntas %}
+            <li>{{ pregunta.contenido.name }} - {{ pregunta.tema.nombre }} - {{ pregunta.universidad.nombre }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'gestionar_universidades_cursos_temas' %}">Volver a Gestionar</a>
+</body>
+</html>
